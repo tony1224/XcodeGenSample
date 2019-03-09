@@ -8,9 +8,9 @@ settings:
   SWIFT_VERSION: 4.0
   CODE_SIGN_STYLE: Automatic
   SSETCATALOG_COMPILER_APPICON_NAME: AppIcon
-  INFOPLIST_FILE: XcodeGenSample/Info.plist
   # Targetごとに分ける場合はtargets:settings:配下に設定
   PRODUCT_BUNDLE_IDENTIFIER: project.kamui.XcodeGenSample
+  # Push通知が必要な場合
   # CODE_SIGN_ENTITLEMENTS: XcodeGenSample/XcodeGen.entitlements
 
 targets:
@@ -23,7 +23,19 @@ targets:
     sources: XcodeGenSample
     settings:
       # DEVELOPMENT_TEAM: 4GTKNHS
+      INFOPLIST_FILE: XcodeGenSample/Info.plist
       ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
+    scheme:
+      testTargets:
+        - XcodeGenSampleTests
+  XcodeGenSampleTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: XcodeGenSampleTests
+    settings:
+      # DEVELOPMENT_TEAM: 4GTKNHS
+      INFOPLIST_FILE: XcodeGenSampleTests/Info.plist
+      CODE_SIGN_STYLE: Automatic
 
 ## Configuration いったん設定しないでいけるか
 ##configs:
