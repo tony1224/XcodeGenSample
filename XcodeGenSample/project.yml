@@ -1,0 +1,31 @@
+name: XcodeGenSample
+
+options:
+  minimumXcodeGenVersion: 2.0.0
+
+settings:
+  IPHONEOS_DEPLOYMENT_TARGET: 12.0
+  SWIFT_VERSION: 4.0
+  CODE_SIGN_STYLE: Automatic
+  SSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+  INFOPLIST_FILE: XcodeGenSample/Info.plist
+  # Targetごとに分ける場合はtargets:settings:配下に設定
+  PRODUCT_BUNDLE_IDENTIFIER: project.kamui.XcodeGenSample
+  # CODE_SIGN_ENTITLEMENTS: XcodeGenSample/XcodeGen.entitlements
+
+targets:
+  XcodeGenSample:
+    # 依存関係のあるFrameworkがある場合の設定
+    #dependencies:
+    #  - target: Hoge
+    type: application
+    platform: iOS
+    sources: XcodeGenSample
+    settings:
+      # DEVELOPMENT_TEAM: 4GTKNHS
+      ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
+
+## Configuration いったん設定しないでいけるか
+##configs:
+##  Debug: debug
+##  Release: release
