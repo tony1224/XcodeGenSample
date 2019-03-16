@@ -24,7 +24,7 @@ targets:
     settings:
       # DEVELOPMENT_TEAM: 4GTKNHS
       INFOPLIST_FILE: XcodeGenSample/Info.plist
-      ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
+      ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: ${inherited}
     scheme:
       testTargets:
         - XcodeGenSampleTests
@@ -36,8 +36,3 @@ targets:
       # DEVELOPMENT_TEAM: 4GTKNHS
       INFOPLIST_FILE: XcodeGenSampleTests/Info.plist
       CODE_SIGN_STYLE: Automatic
-
-## Configuration いったん設定しないでいけるか
-##configs:
-##  Debug: debug
-##  Release: release

@@ -19,6 +19,10 @@ DerivedData
 # CocoaPods
 XcodeGenSample/Pods/*
 
+build
+*.xcodeproj/*
+!*.xcworkspace/contents.xcworkspacedata
+
 # XcodeGen
 *.xcodeproj
 
